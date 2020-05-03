@@ -25,7 +25,9 @@
   },
   "license": "BSD-3-Clause",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "chai": "^3.3.0",
@@ -52,9 +54,11 @@
     "moment": "^2.10.6",
     "stack-trace": "^0.0.9",
     "url-extractor": "^1.0.1",
-    "yargs": "^3.26.0"
+    "yargs": "^3.26.0",
+    "snyk": "^1.316.2"
   },
   "engines": {
     "node": ">=4"
-  }
+  },
+  "snyk": true
 }
